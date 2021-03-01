@@ -1,0 +1,1 @@
+function preload(){drawingProperties.startHelper=new StartHelpers,drawingProperties.startHelper.preloadImages()}function setup(){drawingProperties.startHelper.setupTools(),console.clear()}function draw(){let e=drawingProperties.startHelper.getToolBox();e.selectedTool.hasOwnProperty("draw")?e.selectedTool.draw():alert("It looks like you haven't got a draw function!")}
