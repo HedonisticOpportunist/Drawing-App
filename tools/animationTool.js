@@ -1,0 +1,10 @@
+function AnimationTool() {
+    this.icon = "assets/anime.png", this.name = "Animation Tool", this.elements = document.getElementsByClassName("animation"), this.sprite, this.cat, this.otherCat, this.ghost, this.direction = 90, this.startMouseX = -1, this.startMouseY = -1, this.drawing = !1, this.draw = function () {
+        if (mouseIsPressed && null != drawingProperties.sliderValue) {
+            for (let t = 0; t < this.elements.length; t++) this.elements[t].style.visibility = "visible"; - 1 == this.startMouseX ? (this.startMouseX = mouseX, this.startMouseY = mouseY, this.drawing = !0, loadPixels()) : (updatePixels(), 0 != eventConditions.drawRubikCondition && (this.sprite = createSprite(this.startMouseX, this.startMouseY, 50, 100), this.sprite.velocity.x = random(-1 * drawingProperties.sliderValue, drawingProperties.sliderValue - 10), this.sprite.velocity.y = random(-1 * drawingProperties.sliderValue, drawingProperties.sliderValue - 10), drawSprites()), 0 != eventConditions.drawCatsCondition && (this.cat = createSprite(this.startMouseX, this.startMouseY, 50, 100), this.otherCat = createSprite(this.startMouseX - 100, this.startMouseY - 100, 50, 100), this.cat.addAnimation("running", imageProperties.non_sequence_animations[0]), this.otherCat.addAnimation("resting", imageProperties.non_sequence_animations[2]), this.direction += 2, this.cat.setSpeed(3, this.direction), this.otherCat.setSpeed(3, this.direciton), drawSprites()), 0 != eventConditions.drawGhostCondition && (this.ghost = createSprite(this.startMouseX, this.startMouseY, 50, 100), this.ghost.addAnimation("haunting", imageProperties.non_sequence_animations[1]), this.ghost.attractionPoint(.2, this.startMouseX, this.startMouseY), this.ghost.maxSpeed = 5, drawSprites()), 0 != eventConditions.drawKittensCondition && animation(imageProperties.sequenceAnimation, this.startMouseX, this.startMouseY))
+        } else this.drawing && (loadPixels(), this.drawing = !1, this.startMouseX = -1, this.startMouseY = -1)
+    }, this.unselectTool = function () {
+        updatePixels();
+        for (let t = 0; t < this.elements.length; t++) this.elements[t].style.visibility = "hidden"
+    }
+}
