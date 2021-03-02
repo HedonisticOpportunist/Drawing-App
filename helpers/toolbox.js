@@ -1,23 +1,75 @@
-function Toolbox() {
-    var o = this;
-    this.tools = [], this.selectedTool = null;
+/*
+Toolbox
+***************
+Implements the tools. 
+*/
 
-    function l() {
-        let t = selectAll(".sideBarItem");
-        for (let e = 0; e < t.length; e++) t[e].style("border", "0");
-        var e = this.id().split("sideBarItem")[0];
-        o.selectTool(e), loadPixels()
+function Toolbox() {
+
+    let self = this;
+    this.tools = [];
+    this.selectedTool = null;
+
+    /* 
+    ************************************ 
+    
+            METHODS 
+    
+    ************************************
+    
+    */
+
+    let toolbarItemClick = function () {
+        let items = selectAll(".sideBarItem");
+        for (let i = 0; i < items.length; i++) {
+            items[i].style('border', '0')
+        }
+
+        let toolName = this.id().split("sideBarItem")[0];
+        self.selectTool(toolName);
+        loadPixels();
+
     }
-    this.addTool = function (e) {
-        e.hasOwnProperty("icon") && e.hasOwnProperty("name") || alert("Make sure your tool has both a name and an icon"), this.tools.push(e),
-            function (e, t) {
-                let o = createDiv("<img src='" + e + "'></div>");
-                o.class("sideBarItem"), o.id(t + "sideBarItem"), o.parent("sidebar"), o.mouseClicked(l)
-            }(e.icon, e.name), null == this.selectedTool && this.selectTool(e.name)
-    }, this.selectTool = function (t) {
-        for (let e = 0; e < this.tools.length; e++) this.tools[e].name == t && (null != this.selectedTool && this.selectedTool.hasOwnProperty("unselectTool") && this.selectedTool.unselectTool(), this.selectedTool = this.tools[e], select("#" + t + "sideBarItem").style("border", "2px solid blue"), this.selectedTool.hasOwnProperty("populateOptions") && this.selectedTool.populateOptions())
-    }, this.addTitle = function (t) {
-        let o = document.querySelectorAll(".sideBarItem img");
-        for (let e = 0; e < o.length; e++) o[e].title = t[e].name
-    }
+
+    let addToolIcon = function (icon, name) {
+        let sideBarItem = createDiv("<img src='" + icon + "'></div>");
+        sideBarItem.class('sideBarItem')
+        sideBarItem.id(name + "sideBarItem")
+        sideBarItem.parent('sidebar');
+        sideBarItem.mouseClicked(toolbarItemClick);
+    };
+
+    this.addTool = function (tool) {
+        if (!tool.hasOwnProperty("icon") || !tool.hasOwnProperty("name")) {
+            alert("Make sure your tool has both a name and an icon");
+        }
+        this.tools.push(tool);
+        addToolIcon(tool.icon, tool.name);
+        if (this.selectedTool == null) {
+            this.selectTool(tool.name);
+        }
+    };
+
+    this.selectTool = function (toolName) {
+        for (let i = 0; i < this.tools.length; i++) {
+            if (this.tools[i].name == toolName) {
+                if (this.selectedTool != null && this.selectedTool.hasOwnProperty(
+                        "unselectTool")) {
+                    this.selectedTool.unselectTool();
+                }
+                this.selectedTool = this.tools[i];
+                select("#" + toolName + "sideBarItem").style("border", "2px solid blue");
+                if (this.selectedTool.hasOwnProperty("populateOptions")) {
+                    this.selectedTool.populateOptions();
+                }
+            }
+        }
+    };
+
+    this.addTitle = function (tools) {
+        let items = document.querySelectorAll(".sideBarItem img");
+        for (let i = 0; i < items.length; i++) {
+            items[i].title = tools[i].name;
+        }
+    };
 }
