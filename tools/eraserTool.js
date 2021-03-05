@@ -40,3 +40,5 @@ class EraserTool {
     };
   }
 }
+
+export { EraserTool };

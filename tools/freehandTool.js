@@ -34,3 +34,5 @@ class FreehandTool {
     };
   }
 }
+
+export { FreehandTool };

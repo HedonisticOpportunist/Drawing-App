@@ -142,3 +142,5 @@ class AnimationTool {
     };
   }
 }
+
+export { AnimationTool };

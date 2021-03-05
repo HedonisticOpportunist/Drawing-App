@@ -112,3 +112,5 @@ class GeometricShapesTool {
     };
   }
 }
+
+export { GeometricShapesTool };

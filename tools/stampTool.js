@@ -62,3 +62,5 @@ class StampTool {
     };
   }
 }
+
+export { StampTool };

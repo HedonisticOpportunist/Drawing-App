@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <script src="lib/p5.js"></script>
     <script src="lib/p5.dom.js"></script>
     <script src="lib/iro.js"></script>
@@ -12,84 +11,181 @@
 
     <!-- gateway script and helper functions -->
     <script src="sketch.js"></script>
-    <script src="helpers/eventHelpers.js"></script>
-    <script src="helpers/colourPalette.js"></script>
+    <script type="module" src="helpers/eventHelpers.js"></script>
+    <script type="module" src="helpers/colourPalette.js"></script>
 
     <script src="helpers/drawingHelpers.js"></script>
-    <script src="helpers/toolbox.js"></script>
-    <script src="helpers/startHelpers.js"></script>
+    <script type="module" src="helpers/toolbox.js"></script>
+    <script type="module" src="helpers/startHelpers.js"></script>
 
-    <!-- tool-related scripts -->
+    <!-- tool-related modules  -->
 
-    <script src="tools/freehandTool.js"></script>
-    <script src="tools/lineToTool.js"></script>
-    <script src="tools/sprayCanTool.js"></script>
+    <script type="module" src="tools/freehandTool.js"></script>
+    <script type="module" src="tools/lineToTool.js"></script>
+    <script type="module" src="tools/sprayCanTool.js"></script>
 
-    <script src="tools/stampTool.js"></script>
-    <script src="tools/mirrorDrawTool.js"></script>
-    <script src="tools/addTransparentLayer.js"></script>
+    <script type="module" src="tools/stampTool.js"></script>
+    <script type="module" src="tools/mirrorDrawTool.js"></script>
+    <script type="module" src="tools/addTransparentLayer.js"></script>
 
-    <script src="tools/imageTool.js"></script>
-    <script src="tools/geometricShapesTool.js"></script>
-    <script src="tools/eraserTool.js"></script>
+    <script type="module" src="tools/imageTool.js"></script>
+    <script type="module" src="tools/geometricShapesTool.js"></script>
+    <script type="module" src="tools/eraserTool.js"></script>
 
-    <script src="tools/randomStringTool.js"></script>
-    <script src="tools/3DTool.js"></script>
-    <script src="tools/animationTool.js"></script>
+    <script type="module" src="tools/randomStringTool.js"></script>
+    <script type="module" src="tools/3DTool.js"></script>
+    <script type="module" src="tools/animationTool.js"></script>
 
-    <script src="tools/croppingTool.js"></script>
+    <script type="module" src="tools/croppingTool.js"></script>
 
     <!-- stylesheets-->
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <div class="box header">Hedochan's Drawing App ( ≚ᄌ≚)ƶƵ
-            <a class="btn clear">Clear</a>
-            <a class="btn save">Save</a>
-            <a class="btn reload">Reload Application</a>
-            <input type="range" class="slider" min="10" max="100" step="10" oninput="displaySliderValue(this.value)">
-            <output id="output"></output>
-            <a class="credits" href="drawing_app_minfied/icon_credits.html">Icon Credits</a>
-            <a class="credits" href="drawing_app_minfied/help.html">Help</a>
-        </div>
-        <div class="box" id="sidebar"></div>
-        <div id="content"></div>
-        <div class="box colourPalette">
-            <div class="picker"></div>
-        </div>
-        <div class="box options">
-            <!-- Additional Buttons -->
-            <a class="btn shapes" id="shapes_btn">Fill Shape With Random Colours</a>
-            <a class="btn cut" id="cut_btn">Cut</a>
-            <!-- Shape images -->
-            <input type="image" class="shape" id="shape_triangle" src="assets/triangle.png">
-            <input type="image" class="shape" id="shape_ellipse" src="assets/circle.png">
-            <input type="image" class="shape" id="shape_rectangle" src="assets/rounded-rectangle.png">
-            <input type="image" class="shape" id="shape_heart" src="assets/heart.png">
-            <input type="image" class="shape" id="shape_line" src="assets/minus.png">
-            <!-- Cat Images -->
-            <input type="image" class="cat" id="unicorn cat" src="assets/unicorn_cat.png">
-            <input type="image" class="cat" id="blue cat" src="assets/blue_cat.png">
-            <input type="image" class="cat" id="sleeping cat" src="assets/kitty.png">
-            <input type="image" class="cat" id="black cat" src="assets/black-cat.png">
-            <input type="image" class="cat" id="happy cat" src="assets/happy.png">
-            <!-- Paw Images -->
-            <input type="image" class="stamp" id="pink paw" src="assets/paw.png">
-            <input type="image" class="stamp" id="black pawprints" src="assets/pawprints.png">
-            <input type="image" class="stamp" id="brown pawprints" src="assets/brown_paw.png">
-            <!-- 3D Images-->
-            <input type="image" class="threedim" id="threedim_sphere" src="assets/sphere.png">
-            <input type="image" class="threedim" id="threedim_cone" src="assets/cone.png">
-            <!-- Animation Images-->
-            <input type="image" class="animation" id="rubik" src="assets/rubik.png">
-            <input type="image" class="animation" id="running_cat" src="animations/run.png">
-            <input type="image" class="animation" id="ghost" src="animations/ghost.png">
-            <input type="image" class="animation" id="sleeping_cat_sprite" src="animations/kitten3.png">
-        </div>
+      <div class="box header">
+        Hedochan's Drawing App ( ≚ᄌ≚)ƶƵ
+        <a class="btn clear">Clear</a>
+        <a class="btn save">Save</a>
+        <a class="btn reload">Reload Application</a>
+        <input
+          type="range"
+          class="slider"
+          min="10"
+          max="100"
+          step="10"
+          oninput="displaySliderValue(this.value)"
+        />
+        <output id="output"></output>
+        <a class="credits" href="drawing_app_minfied/icon_credits.html"
+          >Icon Credits</a
+        >
+        <a class="credits" href="drawing_app_minfied/help.html">Help</a>
+      </div>
+      <div class="box" id="sidebar"></div>
+      <div id="content"></div>
+      <div class="box colourPalette">
+        <div class="picker"></div>
+      </div>
+      <div class="box options">
+        <!-- Additional Buttons -->
+        <a class="btn shapes" id="shapes_btn">Fill Shape With Random Colours</a>
+        <a class="btn cut" id="cut_btn">Cut</a>
+        <!-- Shape images -->
+        <input
+          type="image"
+          class="shape"
+          id="shape_triangle"
+          src="assets/triangle.png"
+        />
+        <input
+          type="image"
+          class="shape"
+          id="shape_ellipse"
+          src="assets/circle.png"
+        />
+        <input
+          type="image"
+          class="shape"
+          id="shape_rectangle"
+          src="assets/rounded-rectangle.png"
+        />
+        <input
+          type="image"
+          class="shape"
+          id="shape_heart"
+          src="assets/heart.png"
+        />
+        <input
+          type="image"
+          class="shape"
+          id="shape_line"
+          src="assets/minus.png"
+        />
+        <!-- Cat Images -->
+        <input
+          type="image"
+          class="cat"
+          id="unicorn cat"
+          src="assets/unicorn_cat.png"
+        />
+        <input
+          type="image"
+          class="cat"
+          id="blue cat"
+          src="assets/blue_cat.png"
+        />
+        <input
+          type="image"
+          class="cat"
+          id="sleeping cat"
+          src="assets/kitty.png"
+        />
+        <input
+          type="image"
+          class="cat"
+          id="black cat"
+          src="assets/black-cat.png"
+        />
+        <input type="image" class="cat" id="happy cat" src="assets/happy.png" />
+        <!-- Paw Images -->
+        <input type="image" class="stamp" id="pink paw" src="assets/paw.png" />
+        <input
+          type="image"
+          class="stamp"
+          id="black pawprints"
+          src="assets/pawprints.png"
+        />
+        <input
+          type="image"
+          class="stamp"
+          id="brown pawprints"
+          src="assets/brown_paw.png"
+        />
+        <!-- 3D Images-->
+        <input
+          type="image"
+          class="threedim"
+          id="threedim_sphere"
+          src="assets/sphere.png"
+        />
+        <input
+          type="image"
+          class="threedim"
+          id="threedim_cone"
+          src="assets/cone.png"
+        />
+        <!-- Animation Images-->
+        <input
+          type="image"
+          class="animation"
+          id="rubik"
+          src="assets/rubik.png"
+        />
+        <input
+          type="image"
+          class="animation"
+          id="running_cat"
+          src="animations/run.png"
+        />
+        <input
+          type="image"
+          class="animation"
+          id="ghost"
+          src="animations/ghost.png"
+        />
+        <input
+          type="image"
+          class="animation"
+          id="sleeping_cat_sprite"
+          src="animations/kitten3.png"
+        />
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

@@ -55,3 +55,5 @@ class RandomStringsTool {
     };
   }
 }
+
+export { RandomStringsTool };

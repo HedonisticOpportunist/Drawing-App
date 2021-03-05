@@ -39,3 +39,5 @@ class LineToTool {
     };
   }
 }
+
+export { LineToTool };

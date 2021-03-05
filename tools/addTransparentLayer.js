@@ -39,3 +39,5 @@ class AddTransparentLayer {
     };
   }
 }
+
+export { AddTransparentLayer };

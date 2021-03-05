@@ -108,3 +108,5 @@ class MirrorDrawTool {
     };
   }
 }
+
+export { MirrorDrawTool };

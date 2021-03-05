@@ -60,3 +60,5 @@ class CroppingTool {
     };
   }
 }
+
+export { CroppingTool };

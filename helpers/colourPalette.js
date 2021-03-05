@@ -46,3 +46,5 @@ class ColourPalette {
     this.loadColours();
   }
 }
+
+export { ColourPalette };

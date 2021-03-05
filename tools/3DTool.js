@@ -85,10 +85,10 @@ class ThreeDimensionalTool {
           textSize(18);
           text(
             "You've exhausted the amount of frames allowed to run for new 3D drawings." +
-            "\n" +
-            "Please re-load the application if you want to create a new 3D drawing." +
-            "\n" +
-            "Just make sure to save your previous changes.",
+              "\n" +
+              "Please re-load the application if you want to create a new 3D drawing." +
+              "\n" +
+              "Just make sure to save your previous changes.",
             100,
             200
           );
@@ -120,3 +120,5 @@ class ThreeDimensionalTool {
     };
   }
 }
+
+export { ThreeDimensionalTool };

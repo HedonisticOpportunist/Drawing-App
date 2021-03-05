@@ -46,3 +46,5 @@ class ImageTool {
     };
   }
 }
+
+export { ImageTool };

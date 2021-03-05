@@ -4,6 +4,10 @@ START UP HELPERS
 Helps set up the drawing app. 
 */
 
+import * as Helpers from StartHelpers
+import * as ToolBox from ToolBox
+
+
 /*
 VARIABLES
 */
@@ -30,13 +34,7 @@ let imageProperties = {
 
 class StartHelpers {
   constructor() {
-    /*
-      variables
-      */
-    let helpers;
-    let toolbox;
-    let colourP;
-
+  
     /*
     ************************************
       
@@ -93,23 +91,23 @@ class StartHelpers {
     this.setUp3DCanvas = function (container) {
       /* set the canvas for the 3D image to be smaller than
           the main cavas */
-      return createGraphics(400, 400, WEBGL);
+      return window.createGraphics(400, 400, WEBGL);
     };
 
     /* set up all the tools for the drawing application */
     this.setupTools = function () {
-      canvasContainer = select("#content");
-      let canvas = createCanvas(
-        canvasContainer.size().width,
-        canvasContainer.size().height
+      window.canvasContainer = select("#content");
+      let canvas = window.createCanvas(
+        window.canvasContainer.size().width,
+        window.canvasContainer.size().height
       );
       canvas.parent("content");
       frameRate();
 
       //instantiate the necessary helper functions
-      helpers = new EventHelpers();
-      colourP = new ColourPalette();
-      toolbox = new Toolbox();
+      Helpers = new EventHelpers();
+      ColourP = new ColourPalette();
+      ToolBox = new Toolbox();
 
       //place the tools in an array and instantiate them
       tools = [
@@ -131,11 +129,11 @@ class StartHelpers {
       /*iterate through the elements in the tools array and then add them to
         the tool box*/
       for (let k = 0; k < tools.length; k++) {
-        toolbox.addTool(tools[k]);
+        ToolBox.addTool(tools[k]);
       }
 
       /*add title attributes to all the images that the toolbox uses*/
-      toolbox.addTitle(tools);
+      ToolBox.addTitle(tools);
 
       //set the background colour to a default value
       background(drawingProperties.backgroundColour);
@@ -156,3 +154,5 @@ class StartHelpers {
     };
   }
 }
+
+export { StartHelpers };

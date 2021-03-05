@@ -30,3 +30,5 @@ class SprayCanTool {
     };
   }
 }
+
+export { SprayCanTool };

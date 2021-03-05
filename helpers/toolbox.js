@@ -76,3 +76,5 @@ class Toolbox {
     };
   }
 }
+
+export { Toolbox };

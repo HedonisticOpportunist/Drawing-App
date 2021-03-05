@@ -2,13 +2,15 @@
 Entry/Gateway script 
 */
 
+import * as StartHelpers from StartHelpers
+
 function preload() {
-  drawingProperties.startHelper = new StartHelpers();
-  drawingProperties.startHelper.preloadImages();
+  drawingProperties.StartHelpers = new StartHelpers();
+  drawingProperties.StartHelpers.preloadImages();
 }
 
 function setup() {
-  drawingProperties.startHelper.setupTools();
+  drawingProperties.StartHelpers.setupTools();
 
   //clear any unnecessary warnings
   console.clear();
@@ -18,7 +20,7 @@ function setup() {
 the draw function
 */
 function draw() {
-  let toolbox = drawingProperties.startHelper.getToolBox();
+  let toolbox = drawingProperties.StartHelpers.getToolBox();
 
   if (toolbox.selectedTool.hasOwnProperty("draw")) {
     toolbox.selectedTool.draw();
