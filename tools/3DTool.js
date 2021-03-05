@@ -42,7 +42,6 @@ function ThreeDimensionalTool() {
             if (this.frames > this.lowerBound && this.frames < this.upperBound) {
 
                 this.graphics = drawingProperties.startHelper.setUp3DCanvas(canvasContainer);
-                console.log(this.graphics);
                 //change the background depending on the colour palette value 
                 this.graphics.background(drawingProperties.colourInput);
 
