@@ -1,32 +1,88 @@
 <!DOCTYPE html>
 <html>
-   <!-- stylesheets-->
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
-   <body>
-         <h2>== EXTERNAL LIBRARIES ==</h2>
-         <p>I used the following third libraries to help enhance my project or implement certain features: https://iro.js.org/ (colour palette)</p>
-         <ul>
-         <li>https://iro.js.org/ (colour palette)</li>
-         <li>https://github.com/generative-light/p5.scribble.js (squiggly / wiggly shapes)</li>
-         <li>https://github.com/gaba5/p5.shape.js (more shape options)</li>
-         <li>http://molleindustria.github.io/p5.play/ (loading animations and drawing sprites)</li>
-         </ul>
-         <h2>== IMAGE CREDITS ==</h2>
-         <p>The images used throughout the site were mostly found on https://www.flaticon.com/authors/flat-icons. I have also created a html page entitled &lsquo;icon_credits&rsquo; within the app itself to address any further credits for images / animations used throughout the project.</p>
-         <h2>== HTML AND CSS ==</h2>
-         <p> In order to incorporate items such as the gradient button, I used the code from https://codepen.io/pirrera/pen/bqVeGx which I modified slightly to use my needs. 
-         </p>
-         <p>Another piece of css, I modified slightly is the code for the horizontal tab on the icon credits and help pages. The css code came from: https://css-tricks.com/examples/hrs/ 
-         </p>
-         <p>The slider was implemented using: https://www.w3schools.com/howto/howto_js_rangeslider.asp which I also customised to further fit in with the rest of the application&rsquo;s appearance. 
-         </p>
-         <h2> == JS CODE ==  </h2>
-         <p>
-         In order to generate hex colours, I implemented a getRandomColour method in the drawingHelpers file. The code was found here: https://stackoverflow.com/questions/1484506/random-color-generator
-         </p>
-         <p>
-          In order to minify the external Javascript libraries, I used https://jscompress.com/
-         </p>
-   </body>
+<meta charset="utf-8" />
+<title>Help Page ❤</title>
+<!-- stylesheets-->
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet" />
+
+<body>
+      <h2>EXTENSIONS</h2>
+
+      <p>
+      <h3>3D TOOL</h3>
+      </p>
+      <p>The 3D tool creates buffer graphics which are saved as an image to the canvas; the buffer includes the WEBGL
+            canvas created separately for this extension. The canvas for the 3D drawing is 400 by 400, and its
+            background colour can be changed via the colour palette. In order to avoid memory leaks, the 3D tool imposes
+            limits on how many sketches can be drawn before reloading the application.
+      </p>
+
+      <p>
+      <h3>ANIMATION TOOL</h3>
+      </p>
+
+      <p>The animation tool can either draw sprites or to load images as a sequence of animations on the canvas. There
+            are three available animations to choose from. Upon selection of an animation, a compound boolean condition
+            is triggered that then selects an event handler from the helper function in order to display the animation
+            on the canvas. </p>
+
+      <p>
+      <h3>CROPPING TOOL</h3>
+      </p>
+
+      <p>The cropping tool selects an area via the mouse coordinates and then draws a beige background on the screen
+            once the cut button has been clicked. The mouse click event is handled in the helper function.
+      </p>
+
+      <p>
+      <h3>ERASER TOOL</h3>
+      </p>
+
+      <p>The eraser tool draws a line over a selected area via mouse coordinates. The stroke weight can be with the
+            slider. The colour of the eraser is the same as the background colour, unless the screen has been cleared or
+            the console has selected.</p>
+
+      <p>
+      <h3>GEOMETRIC SHAPES TOOL</h3>
+      </p>
+
+      <p>
+            Geometric shapes can be selected from the images displayed in the div options field. Upon selection, the
+            position of the shape is determined via mouse coordinates. The stroke weight of the shape is set by the
+            slider. The colour of the shape can either be selected via the colour palette or by clicking on a button
+            that displays a random hex colour.
+      </p>
+
+      <p>
+      <h3>ADD TRANSPARENT LAYER TOOL</h3>
+      </p>
+
+      <p>The tool uses the blend mode and colour palette to draw a transparent rectangle over the canvas.</p>
+
+      <p>
+      <h3>IMAGE TOOL</h3>
+      </p>
+
+      <p>The image tool displays a selected image via a mouse click event in the helpers function. The event is
+            triggered by clicking on one of the images displayed in the options div field. </p>
+
+      <p>
+      <h3>RANDOM STRING TOOL</h3>
+      </p>
+
+      <p>The random string tool picks a random cat emoji from an array and displays that emoji on the canvas. The stroke
+            weight is modified via the slider. The background surrounding the text can be changed via the colour
+            palette. </p>
+
+
+      <p>
+      <h3>STAMP TOOL</h3>
+      </p>
+      <p>The stamp tool displays a selected image via a mouse click event in the helpers function. The event is
+            triggered by clicking on one of the image options displayed in the options div field. The stamp can be
+            resized via the slider.
+      </p>
+</body>
+
 </html>
