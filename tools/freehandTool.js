@@ -2,7 +2,7 @@
 FREE HAND TOOL FUNCTION
 */
 
-function FreehandTool() {
+function FreeHandTool() {
         this.icon = "assets/pencil.png";
         this.name = "Free Hand Tool";
 

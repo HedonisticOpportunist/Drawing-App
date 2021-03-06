@@ -1,257 +1,268 @@
-    html,
+html,
+body {
+  margin: 0px;
+  height: 100%;
+  background-color: #f5f4f4;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+}
+ul,
+li {
+  list-style-type: none;
+}
+.credits {
+  font-size: 10px;
+  font-style: italic;
+}
+/*Component styling*/
+
+#sidebar {
+  grid-area: sidebar;
+  overflow-y: scroll;
+}
+#content {
+  grid-area: content;
+}
+.header {
+  grid-area: header;
+}
+.footer {
+  grid-area: footer;
+}
+.sideBarItem {
+  max-height: 50px;
+  max-width: 50px;
+  padding: 5px;
+}
+.sideBarItem img {
+  max-height: 50px;
+  max-width: 50px;
+}
+.colourPalette {
+  grid-area: colourP;
+  display: flex;
+  flex-direction: grid;
+  flex-flow: wrap;
+}
+.options {
+  grid-area: options;
+  padding: 15px;
+}
+.picker {
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  max-height: 40px;
+  max-width: 40px;
+  margin: 5px;
+}
+.wrapper {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 70px 230px minmax(500px, 1fr);
+  grid-template-rows: 35px minmax(500px, 1fr) 160px;
+  grid-template-areas: "header header header" "sidebar content content" "colourP colourP options";
+  background-color: #e7d9ea;
+  color: #d3e0ea;
+}
+.box {
+  background-color: #65d6ce;
+  color: #eff8ff;
+  font-size: 150%;
+}
+/* Gradient button styling */
+
+.btn {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 8px;
+  text-align: justify-all;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #595b83;
+  box-shadow: 0 0 15px #bc6ff1;
+  border-radius: 10px;
+}
+.btn:hover {
+  background-position: right center;
+}
+.btn {
+  background-image: linear-gradient(
+    to right,
+    #84fab0 0%,
+    #8fd3f4 51%,
+    #84fab0 100%
+  );
+}
+.btn {
+  background-image: linear-gradient(
+    to right,
+    #a1c4fd 0%,
+    #c2e9fb 51%,
+    #a1c4fd 100%
+  );
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #c56183;
+}
+::-webkit-scrollbar-thumb {
+  background: #b2deec;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fadcaa;
+}
+/*Slider*/
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20%;
+  height: 15px;
+  background: #aee6e6;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #93abd3;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #93abd3;
+  cursor: pointer;
+}
+/*Output*/
+
+#output {
+  font-size: 12px;
+}
+/*assorted icon styling*/
+
+#icon {
+  width: 50px;
+  height: 50px;
+  background-size: 100% 100%;
+}
+#shape_triangle {
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  visibility: hidden;
+}
+#shape_ellipse {
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  visibility: hidden;
+}
+#shape_rectangle {
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  visibility: hidden;
+}
+#shape_heart {
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  visibility: hidden;
+}
+#shape_line {
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  visibility: hidden;
+}
+.cat {
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  visibility: hidden;
+}
+.stamp {
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  visibility: hidden;
+}
+.threedim {
+  width: 20px;
+  height: 20px;
+  background-size: 100% 100%;
+  visibility: hidden;
+}
+.animation {
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+  visibility: hidden;
+}
+/*Shapes Button*/
+
+#shapes_btn {
+  visibility: hidden;
+}
+/*Cut Button*/
+
+#cut_btn {
+  visibility: hidden;
+}
+/*mini tool display*/
+
+.mini {
+  width: 20px;
+  height: 20px;
+  background-size: 100% 100%;
+}
+/* Flaired edges, by Tomas Theunissen */
+
+hr.style-seven {
+  overflow: visible;
+  /* For IE */
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 18px;
+}
+hr.style-seven:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+/*media query to deal with small screens*/
+
+@media only screen and (max-width: 600px) {
+  .btn {
+    flex: 1 1 auto;
+    margin: 5px;
+    padding: 5px;
+  }
+}
+/*media query to deal with large screens (> 4k)*/
+
+@media (min-width: 2000px) {
     body {
-        margin: 0px;
-        height: 100%;
-        background-color: #f5f4f4;
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 12px;
-    }
-    ul,
-    li {
-        list-style-type: none;
-    }
-    .credits {
-        font-size: 10px;
-        font-style: italic;
-    }
-    /*Component styling*/
-    
-    #sidebar {
-        grid-area: sidebar;
-        overflow-y: scroll;
-    }
-    #content {
-        grid-area: content;
-    }
-    .header {
-        grid-area: header;
-    }
-    .footer {
-        grid-area: footer;
-    }
-    .sideBarItem {
-        max-height: 50px;
-        max-width: 50px;
-        padding: 5px;
-    }
-    .sideBarItem img {
-        max-height: 50px;
-        max-Width: 50px;
-    }
-    .colourPalette {
-        grid-area: colourP;
-        display: flex;
-        flex-direction: grid;
-        flex-flow: wrap;
-    }
-    .options {
-        grid-area: options;
-        padding: 15px;
-    }
-    .picker {
-        box-sizing: border-box;
-        width: 40px;
-        height: 40px;
-        max-height: 40px;
-        max-width: 40px;
-        margin: 5px;
-    }
-    .wrapper {
-        display: grid;
-        height: 100%;
-        grid-template-columns: 70px 230px minmax(500px, 1fr);
-        grid-template-rows: 35px minmax(500px, 1fr) 160px;
-        grid-template-areas: "header header header""sidebar content content""colourP colourP options";
-        background-color: #e7d9ea;
-        color: #d3e0ea;
-    }
-    .box {
-        background-color: #65d6ce;
-        ;
-        color: #eff8ff;
-        font-size: 150%;
-    }
-    /* Gradient button styling */
-    
-    .btn {
-        flex: 1 1 auto;
-        margin: 10px;
-        padding: 8px;
-        text-align: justify-all;
-        font-size: 12px;
-        text-transform: uppercase;
-        transition: 0.5s;
-        background-size: 200% auto;
-        color: #595b83;
-        box-shadow: 0 0 15px #bc6ff1;
-        border-radius: 10px;
-    }
-    .btn:hover {
-        background-position: right center;
-    }
-    .btn {
-        background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
-    }
-    .btn {
-        background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
-    }
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
-    ::-webkit-scrollbar-track {
-        background: #c56183;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: #b2deec;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background: #fadcaa;
-    }
-    /*Slider*/
-    
-    .slider {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 20%;
-        height: 15px;
-        background: #aee6e6;
-        outline: none;
-        opacity: 0.7;
-        -webkit-transition: .2s;
-        transition: opacity .2s;
-    }
-    .slider:hover {
-        opacity: 1;
-    }
-    .slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 15px;
-        height: 15px;
-        background: #93abd3;
-        cursor: pointer;
-    }
-    .slider::-moz-range-thumb {
-        width: 15px;
-        height: 15px;
-        background: #93abd3;
-        cursor: pointer;
-    }
-    /*Output*/
-    
-    #output {
-        font-size: 12px;
-    }
-    /*assorted icon styling*/
-    
-    #icon {
-        width: 50px;
-        height: 50px;
-        background-size: 100% 100%;
-    }
-    #shape_triangle {
-        width: 40px;
-        height: 40px;
-        background-size: 100% 100%;
-        visibility: hidden;
-    }
-    #shape_ellipse {
-        width: 40px;
-        height: 40px;
-        background-size: 100% 100%;
-        visibility: hidden;
-    }
-    #shape_rectangle {
-        width: 40px;
-        height: 40px;
-        background-size: 100% 100%;
-        visibility: hidden;
-    }
-    #shape_heart {
-        width: 40px;
-        height: 40px;
-        background-size: 100% 100%;
-        visibility: hidden;
-    }
-    #shape_line {
-        width: 40px;
-        height: 40px;
-        background-size: 100% 100%;
-        visibility: hidden;
-    }
-    .cat {
-        width: 40px;
-        height: 40px;
-        background-size: 100% 100%;
-        visibility: hidden;
-    }
-    .stamp {
-        width: 40px;
-        height: 40px;
-        background-size: 100% 100%;
-        visibility: hidden;
-    }
-    .threedim {
-        width: 20px;
-        height: 20px;
-        background-size: 100% 100%;
-        visibility: hidden;
-    }
-    .animation {
-        width: 30px;
-        height: 30px;
-        background-size: 100% 100%;
-        visibility: hidden;
-    }
-    /*Shapes Button*/
-    
-    #shapes_btn {
-        visibility: hidden;
-    }
-    /*Cut Button*/
-    
-    #cut_btn {
-        visibility: hidden;
-    }
-    /*mini tool display*/
-    
-    .mini {
-        width: 20px;
-        height: 20px;
-        background-size: 100% 100%;
-    }
-    /* Flaired edges, by Tomas Theunissen */
-    
-    hr.style-seven {
-        overflow: visible;
-        /* For IE */
-        height: 30px;
-        border-style: solid;
-        border-color: black;
-        border-width: 1px 0 0 0;
-        border-radius: 18px;
-    }
-    hr.style-seven:before {
-        display: block;
-        content: "";
-        height: 30px;
-        margin-top: -31px;
-        border-style: solid;
-        border-color: black;
-        border-width: 0 0 1px 0;
-        border-radius: 20px;
-    }
-    /*media query to deal with small screens*/
-    
-    @media only screen and (max-width: 600px) {
-        .btn {
-            flex: 1 1 auto;
-            margin: 5px;
-            padding: 5px;
-        }
-    }
-    /*media query to deal with large screens (> 4k)*/
-    
-    @media (min-width: 2000px) {
         width: 100%;
     }
+}

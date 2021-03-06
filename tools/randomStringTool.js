@@ -2,7 +2,7 @@
 RANDOM STRING TOOL FUNCTION
 */
 
-function RandomStringsTool() {
+function RandomStringTool() {
   this.icon = "assets/text.png";
   this.name = "Random Cat Emoji String Tool";
 

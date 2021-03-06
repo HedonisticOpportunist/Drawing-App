@@ -9,9 +9,7 @@ function StartHelpers() {
   /*
     VARIABLES 
     */
-  let helpers;
   let toolbox;
-  let colourP;
 
   /* 
     ************************************ 
@@ -93,7 +91,21 @@ function StartHelpers() {
     toolbox = new Toolbox();
 
     //place the tools in an array and instantiate them
-    tools = [new ThreeDimensionalTool(), new AddTransparentLayer()];
+    tools = [
+      new ThreeDimensionalTool(),
+      new AnimationTool(),
+      new FreeHandTool(),
+      new SprayCanTool(),
+      new ImageTool(),
+      new LineToTool(),
+      new GeometricShapesTool(),
+      new StampTool(),
+      new RandomStringTool(),
+      new AddTransparentLayer(),
+      new CroppingTool(),
+      new EraserTool(),
+      new MirrorDrawTool(),
+    ];
 
     /*
         iterate through the elements in the tools array and then add them to  
