@@ -92,9 +92,9 @@ function StartHelpers() {
 
     //place the tools in an array and instantiate them
     tools = [
+      new FreeHandTool(),
       new ThreeDimensionalTool(),
       new AnimationTool(),
-      new FreeHandTool(),
       new SprayCanTool(),
       new ImageTool(),
       new LineToTool(),
