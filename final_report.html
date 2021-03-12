@@ -7,201 +7,161 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet" />
 
 <body>
-      <h2>EXTENSIONS</h2>
+    <h2>EXTENSIONS</h2>
 
-      <p>
-      <h3>3D TOOL</h3>
-      </p>
-      <p>The 3D tool creates buffer graphics which are saved as an image to the canvas; the buffer includes the WEBGL
-            canvas created separately for this extension. The canvas for the 3D drawing is 400 by 400, and its
-            background colour can be changed via the colour palette. In order to avoid memory leaks, the 3D tool imposes
-            limits on how many sketches can be drawn before reloading the application.
-      </p>
+    <p>
+        <h3>3D TOOL</h3>
+    </p>
+    <p>The 3D tool creates buffer graphics which are saved as an image to the canvas; the buffer includes the WEBGL canvas which is created separately for this extension. The canvas for the 3D drawing is 400 by 400, and its background colour can be changed via the colour palette. In order to avoid memory leaks, the 3D tool imposes limits on how many sketches can be drawn before reloading the application.
+    </p>
+    <p>
+        <h3>ANIMATION TOOL</h3>
+    </p>
 
-      <p>
-      <h3>ANIMATION TOOL</h3>
-      </p>
+    <p>The animation tool can either draw sprites or to load images as a sequence of animations on the canvas. There are three available animations to choose from. Upon selection of an animation, a compound boolean condition is triggered that then selects an event handler from the helper function in order to display the animation on the canvas. </p>
 
-      <p>The animation tool can either draw sprites or to load images as a sequence of animations on the canvas. There
-            are three available animations to choose from. Upon selection of an animation, a compound boolean condition
-            is triggered that then selects an event handler from the helper function in order to display the animation
-            on the canvas. </p>
+    <p>
+        <h3>CROPPING TOOL</h3>
+    </p>
 
-      <p>
-      <h3>CROPPING TOOL</h3>
-      </p>
+    <p>The cropping tool selects an area via the mouse coordinates and then draws a beige background on the screen once the cut button has been clicked. The mouse click event is handled in the helper function.
+    </p>
 
-      <p>The cropping tool selects an area via the mouse coordinates and then draws a beige background on the screen
-            once the cut button has been clicked. The mouse click event is handled in the helper function.
-      </p>
+    <p>
+        <h3>ERASER TOOL</h3>
+    </p>
 
-      <p>
-      <h3>ERASER TOOL</h3>
-      </p>
+    <p>The eraser tool draws a line over a selected area via mouse coordinates. The stroke weight can be with the slider. The colour of the eraser is the same as the background colour, unless the screen has been cleared or the console has selected.</p>
 
-      <p>The eraser tool draws a line over a selected area via mouse coordinates. The stroke weight can be with the
-            slider. The colour of the eraser is the same as the background colour, unless the screen has been cleared or
-            the console has selected.</p>
+    <p>
+        <h3>GEOMETRIC SHAPES TOOL</h3>
+    </p>
 
-      <p>
-      <h3>GEOMETRIC SHAPES TOOL</h3>
-      </p>
+    <p>
+        Geometric shapes can be selected from the images displayed in the div options field. Upon selection, the position of the shape is determined via mouse coordinates. The stroke weight of the shape is set by the slider. The colour of the shape can either be selected via the colour palette or by clicking on a button that displays a random hex colour.
+    </p>
 
-      <p>
-            Geometric shapes can be selected from the images displayed in the div options field. Upon selection, the
-            position of the shape is determined via mouse coordinates. The stroke weight of the shape is set by the
-            slider. The colour of the shape can either be selected via the colour palette or by clicking on a button
-            that displays a random hex colour.
-      </p>
+    <p>
+        <h3>ADD TRANSPARENT LAYER TOOL</h3>
+    </p>
 
-      <p>
-      <h3>ADD TRANSPARENT LAYER TOOL</h3>
-      </p>
+    <p>The tool uses the blend mode and colour palette to draw a transparent rectangle over the canvas.</p>
 
-      <p>The tool uses the blend mode and colour palette to draw a transparent rectangle over the canvas.</p>
+    <p>
+        <h3>IMAGE TOOL</h3>
+    </p>
 
-      <p>
-      <h3>IMAGE TOOL</h3>
-      </p>
+    <p>The image tool displays a selected image via a mouse click event in the helpers function. The event is triggered by clicking on one of the images displayed in the options div field. </p>
 
-      <p>The image tool displays a selected image via a mouse click event in the helpers function. The event is
-            triggered by clicking on one of the images displayed in the options div field. </p>
+    <p>
+        <h3>RANDOM STRING TOOL</h3>
+    </p>
 
-      <p>
-      <h3>RANDOM STRING TOOL</h3>
-      </p>
-
-      <p>The random string tool picks a random cat emoji from an array and displays that emoji on the canvas. The stroke
-            weight is modified via the slider. The background surrounding the text can be changed via the colour
-            palette. </p>
+    <p>The random string tool picks a random cat emoji from an array and displays that emoji on the canvas. The stroke weight is modified via the slider. The background surrounding the text can be changed via the colour palette. </p>
 
 
-      <p>
-      <h3>STAMP TOOL</h3>
-      </p>
-      <p>The stamp tool displays a selected image via a mouse click event in the helpers function. The event is
-            triggered by clicking on one of the image options displayed in the options div field. The stamp can be
-            resized via the slider.
-      </p>
-      <h2>TIME MANAGEMENT</h2>
-      <p>When it comes to logs, I may have misunderstood how many I should have. I thought they were supposed to be
-            weekly and not centered around certain topics. This misunderstanding, however: turned out to be a blessing
-            in disguise. The project logs were an immense help when it came to sticking to my weekly goals.
-      </p>
-      <p>
-            Not only was the fact that I documented all my goals and issues there paramount to prioritising certain
-            tasks over others, but it also proved motivational during times when I was stressed out or feeling
-            uninspired.
-      </p>
-      <h2>EVALUATION</h2>
-      <p>
-      <h3>UNIT TESTING / PERFORMANCE TESTING</h3>
-      </p>
-      <p>
-            Apart from a myriad of bugs that I found while testing (and fixed later on) performance issues when using
-            the normal version of Chrome (not Google Canary). For example, extensions containing images would stop
-            working properly. In order to address these issues, I minified the external Javascript libraries which were
-            creating a lot of noise
-      </p>
-      <h3>USER TESTING</h3>
-      </p>
-      <p>
-            Generally, the overwhelming consensus of the users was that the application looked good and that the
-            features were fun to explore. However, I did a lot of constructive criticism as well, some of which
-            included:
-      </p>
-      <p>
-      <ul>
-            <li>The application is not necessarily self-explanatory as there are no default settings for the individual
-                  extensions.
+    <p>
+        <h3>STAMP TOOL</h3>
+    </p>
+    <p>The stamp tool displays a selected image via a mouse click event in the helpers function. The event is triggered by clicking on one of the image options displayed in the options div field. The stamp can be resized via the slider.
+    </p>
+    <h2>TIME MANAGEMENT</h2>
+    <p>When it comes to logs, I may have misunderstood how many I should have. I thought they were supposed to be weekly and not centered around certain topics. This misunderstanding, however: turned out to be a blessing in disguise. The project logs were an immense help when it came to sticking to my weekly goals.
+    </p>
+    <p>
+        Not only was the fact that I documented all my goals and issues there paramount to prioritising certain tasks over others, but it also proved motivational during times when I was stressed out or feeling uninspired.
+    </p>
+    <h2>EVALUATION</h2>
+    <p>
+        <h3>UNIT TESTING / PERFORMANCE TESTING</h3>
+    </p>
+    <p>
+        Apart from a myriad of bugs that I found while testing (and fixed later on) performance issues when using the normal version of Chrome (not Google Canary). For example, extensions containing images would stop working properly. In order to address these issues, I minified the external Javascript libraries which were creating a lot of noise
+    </p>
+    <h3>USER TESTING</h3>
+    </p>
+    <p>
+        Generally, the overwhelming consensus of the users was that the application looked good and that the features were fun to explore. However, I did a lot of constructive criticism as well, some of which included:
+    </p>
+    <p>
+        <ul>
+            <li>The application is not necessarily self-explanatory as there are no default settings for the individual extensions.
             </li>
             <li>
-                  The application is not responsive as certain extensions do not load on mobile or very large screens.
+                The application is not responsive as certain extensions do not load on mobile or very large screens.
             </li>
             <li>
-                  Some of the images -- like the cat stamp ones -- did not load properly.
+                Some of the images -- like the cat stamp ones -- did not load properly.
             </li>
             <li>
-                  The 3D feature was hard to use and caused memory leaks.
+                The 3D feature was hard to use and caused memory leaks.
             </li>
-      </ul>
-      <p>
-            Most of the issues identified by users were ratified during the next development process and also inspired
-            me to refactor the code as I went along. Still, I do not think that I have been able to address the
-            responsiveness issue of the application as well as I would like -- after all, this would include an entire
-            overhaul of the application
-      </p>
-      <h2>EXTERNAL LIBRARIES</h2>
-      <p>
+        </ul>
+        <p>
+            Most of the issues identified by users were ratified during the next development process and also inspired me to refactor the code as I went along. Still, I do not think that I have been able to address the responsiveness issue of the application as well as I would like -- after all, this would include an entire overhaul of the application
+        </p>
+        <h2>EXTERNAL LIBRARIES</h2>
+        <p>
             I used the following third libraries to help enhance my project:
-      <ul>
-            <li>
-                  <a href="https://iro.js.org/">Iro JS for the colour palette</a>
-            </li>
-            <li>
-                  <a href="https://github.com/generative-light/p5.scribble.js">Scribble JS for the squiggly / wiggly
-                        shapes</a>
-            </li>
-            <li>
-                  <a href="https://github.com/gaba5/p5.shape.js ">P5 Shapes JS for more
-                        shapes</a>
-            </li>
-            <li>
-                  <a href="http://molleindustria.github.io/p5.play/ ">P5 Play JS for (loading animations and drawing
-                        sprites)</a>
-            </li>
-      </ul>
-      </p>
-      <p>
-      <h3>IMAGE CREDITS</h3>
-      </p>
-      <p>
-            The images used throughout the site were mostly found on <a
-                  href="https://www.flaticon.com/authors/flat-icons">FlatIcons.</a>
-            I have also created a html page entitled ‘icon_credits’ within the app itself to address any further credits
-            for
-            images / animations used throughout the project.
-      </p>
-      <p>
-      <h3>HTML AND CSS</h3>
-      </p>
-      <p>
+            <ul>
+                <li>
+                    <a href="https://iro.js.org/">Iro JS for the colour palette</a>
+                </li>
+                <li>
+                    <a href="https://github.com/generative-light/p5.scribble.js">Scribble JS for the squiggly / wiggly
+                shapes</a>
+                </li>
+                <li>
+                    <a href="https://github.com/gaba5/p5.shape.js ">P5 Shapes JS for more
+                shapes</a>
+                </li>
+                <li>
+                    <a href="http://molleindustria.github.io/p5.play/ ">P5 Play JS for (loading animations and drawing
+                sprites)</a>
+                </li>
+            </ul>
+        </p>
+        <p>
+            <h3>IMAGE CREDITS</h3>
+        </p>
+        <p>
+            The images used throughout the site were mostly found on <a href="https://www.flaticon.com/authors/flat-icons">FlatIcons.</a> I have also created a html page entitled ‘icon_credits’ within the app itself to address any further credits for images / animations used throughout the project.
+        </p>
+        <p>
+            <h3>HTML AND CSS</h3>
+        </p>
+        <p>
             In order to incorporate items such as the gradient button, I used the code from
-            <a href="https://codepen.io/pirrera/pen/bqVeGx">CodePen.</a>
-            which I modified slightly to use my needs.
-      </p>
-      <p>
-            Another piece of css, I modified slightly is the code for the horizontal tab on the icon credits and help
-            pages. The css code came from:
+            <a href="https://codepen.io/pirrera/pen/bqVeGx">CodePen.</a> which I modified slightly to use my needs.
+        </p>
+        <p>
+            Another piece of css, I modified slightly is the code for the horizontal tab on the icon credits and help pages. The css code came from:
             <a href="https://css-tricks.com/examples/hrs">CSS Tricks.</a>
-      </p>
-      <p>
+        </p>
+        <p>
             The slider was implemented using:
-            <a href="https://www.w3schools.com/howto/howto_js_rangeslider.asp">W3Schools.</a>
-            which I also
-            customised to further fit in with the rest of the application’s appearance.
-      </p>
-      <p>
-      <h3>
-            JAVASCRIPT CODE
-      </h3>
+            <a href="https://www.w3schools.com/howto/howto_js_rangeslider.asp">W3Schools.</a> which I also customised to further fit in with the rest of the application’s appearance.
+        </p>
+        <p>
+            <h3>
+        JAVASCRIPT CODE
+    </h3>
 
-      </p>
-      <p>
-            In order to generate random hex colours, I implemented a getRandomColour method in the drawingHelpers file.
-            The code was found <a href="https://stackoverflow.com/questions/1484506/random-color-generator">on
-                  StackOverFlow.</a>
-      </p>
-      <p>
+        </p>
+        <p>
+            In order to generate random hex colours, I implemented a getRandomColour method in the drawingHelpers file. The code was found <a href="https://stackoverflow.com/questions/1484506/random-color-generator">on
+            StackOverFlow.</a>
+        </p>
+        <p>
             In order to minify the external Javascript libraries, I used
             <a href="https://jscompress.com/">
-                  JSCompress.</a>
+            JSCompress.</a>
 
-      </p>
-      <hr class="style-seven">
-      <hr>
-      <p>Thanks for reading :) </p>
-      <p><a href="index.html">Return to the drawing app ❤</a></p>
+        </p>
+        <hr class="style-seven">
+        <hr>
+        <p>Thanks for reading :) </p>
+        <p><a href="index.html">Return to the drawing app ❤</a></p>
 </body>
 
 </html>
