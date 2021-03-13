@@ -27,12 +27,12 @@ function RandomStringTool() {
   ];
 
     /*
-      ************************************
+    ************************************
             
               METHODS
             
-      ************************************ 
-      */
+    ************************************ 
+    */
     this.draw = function () {
         loadPixels();
 
@@ -48,7 +48,7 @@ function RandomStringTool() {
     this.pickString = function (result) {
         textSize(drawingProperties.sliderValue);
         fill("#48426d");
-        //get a random value from the cat emoji array
+        //get a random index from the cat emoji array
         let randomValue = Math.floor(Math.random() * this.catEmojis.length);
         text(this.catEmojis[randomValue], mouseX, mouseY);
     };

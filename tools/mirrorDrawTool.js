@@ -17,12 +17,12 @@ function MirrorDrawTool() {
     this.previousOppositeMouseY = -1;
 
     /*
-      ************************************
+    ************************************
           
               METHODS
           
-      ************************************
-      */
+    ************************************
+    */
     this.draw = function () {
         updatePixels();
 

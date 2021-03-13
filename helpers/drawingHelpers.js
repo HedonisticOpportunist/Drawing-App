@@ -2,7 +2,6 @@
 DRAWING HELPERS:COLLECTION OF FUNCTIONS
 ***************
 Helps configure the drawing app.
-
 */
 
 let drawingProperties = {

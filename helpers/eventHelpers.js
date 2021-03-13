@@ -51,7 +51,7 @@ function EventHelpers() {
     //image and stamp condition
     eventConditions.imgClicked = false;
 
-    //cutting tool btn conditon
+    //cutting tool button conditon
     eventConditions.cutBtnSelected = false;
 
     //shapes condition
@@ -86,17 +86,18 @@ function EventHelpers() {
     eventConditions.drawConeCondition = !this.drawCone && this.drawSphere;
     eventConditions.drawSphereCondition = this.drawCone && !this.drawSphere;
 
-    //animation condition
+    //animation conditions
     eventConditions.drawRubikCondition = !this.runningCat && !this.sleepingCat && !this.ghost && this.rubik;
     eventConditions.drawCatsCondition =
         this.runningCat && !this.sleepingCat && !this.ghost && !this.rubik;
     eventConditions.drawGhostCondition = !this.runningCat && !this.sleepingCat && this.ghost && !this.rubik;
     eventConditions.drawKittensCondition = !this.runningCat && this.sleepingCat && !this.ghost && !this.rubik;
 
-    /*singleton array containing all the arrays*/
+    /* singleton array containing 
+    all the related arrays */
     let selectorArrays = {
         /* cat object array containing references
-        to where the images are stored*/
+        to where the images are stored */
         catIDsArray: [
             {
                 name: "#unicorn cat",
@@ -132,7 +133,7 @@ function EventHelpers() {
         },
       ],
         /* shapes id array containing the id selectors
-          referencing the images to be displayed on box options*/
+          referencing the images to be displayed on box options */
         shapesIDArray: [
         "#shape_ellipse",
         "#shape_triangle",
@@ -141,11 +142,11 @@ function EventHelpers() {
         "#shape_line",
       ],
         /* three dimensional shapes id array containing the id
-          selectors referencing the images to be displayed on box options*/
+          selectors referencing the images to be displayed on box options */
         shapes3DArray: ["#threedim_sphere", "#threedim_cone"],
 
         /* animations id array containing the id selectors
-        referencing the images to be displayed on box options*/
+        referencing the images to be displayed on box options */
         animationsArray: [
         "#rubik",
         "#running_cat",
@@ -188,7 +189,7 @@ function EventHelpers() {
     );
 
     /* the following JQuery deals with the cut button
-    and setting when to draw it on the canvas*/
+    and setting when to draw it on the canvas */
     select("#cut_btn").mouseClicked(function () {
         eventConditions.cutBtnSelected = true;
     });
@@ -212,7 +213,7 @@ function EventHelpers() {
             if (key == "shapesIDArray") {
                 for (let j = 0; j < selectorArrays.shapesIDArray.length; j++) {
                     /* the following JQuery deals with geometric shapes
-                      and setting when to draw them on the canvas*/
+                      and setting when to draw them on the canvas */
                     select(selectorArrays.shapesIDArray[j]).mouseClicked(function () {
                         if (selectorArrays.shapesIDArray[j] == "#shape_ellipse") {
                             this.drawRectangle = false;
@@ -245,7 +246,7 @@ function EventHelpers() {
                             eventConditions.drawLineCondition = false;
 
                             /*set the draw triangle conditon to
-                            true*/
+                            true */
                             eventConditions.drawTriangleCondition = true;
                         }
                         if (selectorArrays.shapesIDArray[j] == "#shape_rectangle") {
@@ -262,9 +263,8 @@ function EventHelpers() {
                             eventConditions.drawLineCondition = false;
 
                             /*
-                                                        set the draw rectangle conditon to
-                                                        true
-                                                        */
+                            set the draw rectangle conditon to true
+                            */
                             eventConditions.drawRectangleCondition = true;
                         }
 
@@ -388,7 +388,7 @@ function EventHelpers() {
                             eventConditions.drawKittensCondition = false;
 
                             /* set the draw ghost conditon
-                            to true*/
+                            to true */
                             eventConditions.drawGhostCondition = true;
                         }
 
@@ -404,7 +404,7 @@ function EventHelpers() {
                             eventConditions.drawGhostCondition = false;
 
                             /* set the draw kitten animation conditon
-                            to true*/
+                            to true */
                             eventConditions.drawKittensCondition = true;
                         }
                     });

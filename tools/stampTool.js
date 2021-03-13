@@ -10,12 +10,12 @@ function StampTool() {
     this.displayedStamp = null;
 
     /*
-      ************************************
+    ************************************
           
               METHODS
           
-      ************************************ 
-      */
+    ************************************ 
+    */
     this.draw = function () {
         if (mouseIsPressed && drawingProperties.sliderValue != null) {
             //make the paw image elements visible
@@ -33,7 +33,8 @@ function StampTool() {
             //variable required to set the size of the stamp
             this.size = drawingProperties.sliderValue;
 
-            /*draw one of the clicked upon images if a mouse click has been registered*/
+            /* draw one of the clicked upon images
+            if a mouse click has been registered */
             this.displayedStamp = eventConditions.imgClicked ? image(
                 eventConditions.clickedImage,
                 mousePosX,

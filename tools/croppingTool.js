@@ -12,11 +12,11 @@ function CroppingTool() {
     this.drawing = false;
 
     /*
-        ************************************
+    ************************************
         
                 METHODS
         
-        ************************************
+    ************************************
     */
     this.draw = function () {
         if (mouseIsPressed && drawingProperties.sliderValue != null) {
@@ -32,11 +32,11 @@ function CroppingTool() {
                 if (eventConditions.cutBtnSelected) {
                     updatePixels();
 
-                    /*setting the cropping tool 'erased area'
-                    be the same as the background colour*/
+                    /* setting the cropping tool 'erased area'
+                    to be the same as the background colour */
                     if (drawingProperties.backgroundColour == "#fff3e2") {
                         noStroke();
-                        //the fill for the cut area is white
+                        //make the fill colour for the cut area to be beige
                         fill("#fff3e2");
                     }
                     strokeWeight(drawingProperties.sliderValue);
@@ -53,7 +53,7 @@ function CroppingTool() {
 
     this.unselectTool = function () {
         updatePixels();
-        /*make the cut button's visibility hidden once the tool
+        /* make the cut button's visibility hidden once the tool
               has been unselected */
         this.button.style.visibility = "hidden";
     };

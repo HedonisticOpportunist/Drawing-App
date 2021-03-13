@@ -7,18 +7,17 @@ function AddTransparentLayer() {
     this.name = "Add Transparent Layer Tool";
 
     /*
-      ************************************
+    ************************************
           
                   METHODS
           
-      ************************************
-      */
+    ************************************
+    */
     this.draw = function () {
         loadPixels();
         if (mouseIsPressed) {
-            /*make the blend mode to be the lightest and then
-                  make the fill to be the new input colour from the
-                  colour wheel*/
+            /* set the blend mode to be the lightest and then
+            make the fill to be the new input colour from the colour wheel */
             blendMode(LIGHTEST);
             fill(drawingProperties.colourInput);
 
@@ -31,7 +30,7 @@ function AddTransparentLayer() {
         pop();
     };
 
-    /*reset the blend mode once the tool has been unselected */
+    /* reset the blend mode once the tool has been unselected */
     this.unselectTool = function () {
         updatePixels();
         blendMode(BLEND);

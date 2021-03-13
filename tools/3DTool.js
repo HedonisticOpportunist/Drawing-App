@@ -15,16 +15,15 @@ function ThreeDimensionalTool() {
 
     this.cone = null;
     this.sphere = null;
-
     this.image;
 
     /*
-        ************************************
+    ************************************
         
                 METHODS
         
-        ************************************
-      */
+    ************************************
+    */
     this.draw = function () {
         if (mouseIsPressed) {
             //make the 3D-related images visible
@@ -35,8 +34,8 @@ function ThreeDimensionalTool() {
             //set the frame count
             this.frames = frameCount;
 
-            //make the 3D drawing dependent on the frame count
-            //in order to avoid memory leaks
+            /* make the 3D drawing dependent on the frame count
+            in order to avoid memory leaks */
             if (this.frames > this.lowerBound && this.frames < this.upperBound) {
                 this.graphics = drawingProperties.startHelper.setUp3DCanvas(
                     canvasContainer
@@ -72,7 +71,7 @@ function ThreeDimensionalTool() {
             }
 
             if (this.frames > this.upperBound) {
-                /*Message that informs the user that frame rate has been exhausted*/
+                /* Message that informs the user that the frame rate has been exhausted */
                 clear();
                 noStroke();
                 fill(0);
@@ -108,7 +107,7 @@ function ThreeDimensionalTool() {
         background(drawingProperties.backgroundColour);
         canvas.parent("content");
 
-        //restore the image to fit within this new canvas
+        //restore the image to fit within this original canvas size
         if (this.graphics != null || this.graphics != undefined) {
             image(this.graphics, mouseX, mouseY);
         }

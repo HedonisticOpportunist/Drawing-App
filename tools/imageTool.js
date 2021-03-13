@@ -8,12 +8,12 @@ function ImageTool() {
     this.elements = document.querySelectorAll("[class = 'cat']");
 
     /*
-      ************************************
+    ************************************
           
               METHODS
           
-      ************************************
-      */
+    ************************************
+    */
     this.draw = function () {
         loadPixels();
 
@@ -23,7 +23,8 @@ function ImageTool() {
                 this.elements[i].style.visibility = "visible";
             }
 
-            /*display one of the images once a click event has been registered*/
+            /* display one of the images 
+            once a click event has been registered */
             this.displayedImage = eventConditions.imgClicked ? image(eventConditions.clickedImage, mouseX, mouseY, 100, 100) : this.displayedImage;
         }
 

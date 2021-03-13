@@ -11,12 +11,12 @@ function LineToTool() {
     this.drawing = false;
 
     /*
-      ************************************
+    ************************************
           
            METHODS
           
-      ************************************
-      */
+    ************************************
+    */
     this.draw = function () {
         if (mouseIsPressed) {
             if (this.startMouseX == -1) {

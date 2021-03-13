@@ -21,12 +21,12 @@ function GeometricShapesTool() {
     this.drawing = false;
 
     /*
-      ************************************
+    ************************************
            
           METHODS
            
-      ************************************
-      */
+    ************************************
+    */
     this.draw = function () {
         if (mouseIsPressed && drawingProperties.sliderValue != null) {
             //make the shape images visible

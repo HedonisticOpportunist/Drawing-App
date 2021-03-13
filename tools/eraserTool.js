@@ -22,7 +22,7 @@ function EraserTool() {
                 this.startMouseX = mouseX;
                 this.startMouseY = mouseY;
             } else {
-                /*setting the eraser tool removed area to be
+                /* setting the eraser tool removed area to be
                             the same as the background colour */
                 if (drawingProperties.backgroundColour == "#fff3e2") {
                     stroke(drawingProperties.backgroundColour);

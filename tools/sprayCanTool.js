@@ -10,12 +10,12 @@ function SprayCanTool() {
     this.spread = drawingProperties.sliderValue + 10;
 
     /*
-      ************************************
+    ************************************
           
               METHODS
           
-      ************************************
-      */
+    ************************************
+    */
     this.draw = function () {
         if (mouseIsPressed && drawingProperties.sliderValue != null) {
             for (let i = 0; i < this.points; i++) {

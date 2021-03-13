@@ -19,12 +19,12 @@ function AnimationTool() {
     this.drawing = false;
 
     /*
-      ************************************
+    ************************************
           
                   METHODS
           
-      ************************************
-      */
+    ************************************
+    */
     this.draw = function () {
         if (mouseIsPressed && drawingProperties.sliderValue != null) {
             //make the animation-related images visible
