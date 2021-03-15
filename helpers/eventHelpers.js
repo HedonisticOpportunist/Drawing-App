@@ -53,10 +53,12 @@ function EventHelpers() {
     //image and stamp condition
     eventConditions.imgClicked = false;
 
-    //cutting tool button conditon
+    // button conditons
     eventConditions.cutBtnSelected = false;
+    eventConditions.verticalSelected = false;
+    eventConditions.horizontalSelected = false;
 
-    //shapes condition
+    //shapes conditions
     eventConditions.drawRectangleCondition =
         this.drawRectangle &&
         !this.drawEllipse &&
@@ -155,6 +157,15 @@ function EventHelpers() {
         "#ghost",
         "#sleeping_cat_sprite",
       ],
+
+        /* 
+        button selector array 
+        */
+        buttonsSelectorArray: [
+           "#cut_btn",
+            "#horizontal_btn",
+            "#vertical_btn"
+        ]
     };
 
     /*
@@ -189,12 +200,6 @@ function EventHelpers() {
         },
         false
     );
-
-    /* the following JQuery deals with the cut button
-    and setting when to draw it on the canvas */
-    select("#cut_btn").mouseClicked(function () {
-        eventConditions.cutBtnSelected = true;
-    });
 
     for (let key in selectorArrays) {
         if (selectorArrays.hasOwnProperty(key)) {
@@ -410,6 +415,32 @@ function EventHelpers() {
                             eventConditions.drawKittensCondition = true;
                         }
                     });
+                }
+            }
+
+            if (key == "buttonsSelectorArray") {
+
+                for (let n = 0; n < selectorArrays.buttonsSelectorArray.length; n++) {
+
+                    /* the following JQuery deals with the cut button 
+                    and setting when to draw it on the canvas */
+                    select(selectorArrays.buttonsSelectorArray[n]).mouseClicked(function () {
+
+                        if (selectorArrays.buttonsSelectorArray[n] == "#cut_btn") {
+                            eventConditions.cutBtnSelected = true;
+                        }
+
+                        if (selectorArrays.buttonsSelectorArray[n] == "#horizontal_btn") {
+                            eventConditions.horizontalSelected = true;
+                            eventConditions.verticalSelected = false;
+                        }
+
+                        if (selectorArrays.buttonsSelectorArray[n] == "#vertical_btn") {
+                            eventConditions.verticalSelected = true;
+                            eventConditions.horizontalSelected = false;
+                        }
+                    });
+
                 }
             }
         }

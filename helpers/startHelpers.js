@@ -94,7 +94,7 @@ function StartHelpers() {
       new AddTransparentLayer(),
       new CroppingTool(),
       new EraserTool(),
-      //new MirrorDrawTool(),
+      new MirrorDrawTool()
     ];
 
         /* iterate through the elements in the tools array and then add them to  

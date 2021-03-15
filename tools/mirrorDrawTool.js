@@ -10,7 +10,7 @@ function MirrorDrawTool() {
     this.lineOfSymmetry = width / 2;
     let self = this;
 
-    this.elements = document.querySelectorAll("[class = 'btn direction']");
+    this.elements = document.getElementsByClassName("direction");
     this.previousMouseX = -1;
     this.previousMouseY = -1;
 
@@ -59,46 +59,48 @@ function MirrorDrawTool() {
             this.previousOppositeMouseY = -1;
         }
 
-//        if (self.axis == "x") {
-    //            self.axis = "y";
-    //            self.lineOfSymmetry = height / 2;
-    //            button.html("Make Vertical");
-    //
-    //            self.axis = "x";
-    //            self.lineOfSymmetry = width / 2;
-    //            button.html("Make Horizontal");
+        if (eventConditions.verticalSelected) {
+            self.axis = "x";
+            self.lineOfSymmetry = width / 2;
+        }
 
-            loadPixels();
-            push();
-            strokeWeight(3);
-            stroke("#383e56");
+        if (eventConditions.horizontalSelected) {
 
-            if (this.axis == "x") {
-                line(width / 2, 0, width / 2, height);
-            } else {
-                line(0, height / 2, width, height / 2);
-            }
-            pop();
-        };
+            self.axis = "y";
+            self.lineOfSymmetry = height / 2;
+        }
 
-        this.calculateOpposite = function (n, a) {
-            if (a != this.axis) {
-                return n;
-            }
+        loadPixels();
+        push();
+        strokeWeight(3);
+        stroke("#383e56");
 
-            if (n < this.lineOfSymmetry) {
-                return this.lineOfSymmetry + (this.lineOfSymmetry - n);
-            } else {
-                return this.lineOfSymmetry - (n - this.lineOfSymmetry);
-            }
-        };
+        if (this.axis == "x") {
+            line(width / 2, 0, width / 2, height);
+        } else {
+            line(0, height / 2, width, height / 2);
+        }
+        pop();
+    };
 
-        this.unselectTool = function () {
-            updatePixels();
-            //make the direction buttons hidden once the 
-            //tool has been unselected
-            for (let i = 0; i < this.elements.length; i++) {
-                this.elements[i].style.visibility = "hidden";
-            }
-        };
-    }
+    this.calculateOpposite = function (n, a) {
+        if (a != this.axis) {
+            return n;
+        }
+
+        if (n < this.lineOfSymmetry) {
+            return this.lineOfSymmetry + (this.lineOfSymmetry - n);
+        } else {
+            return this.lineOfSymmetry - (n - this.lineOfSymmetry);
+        }
+    };
+
+    this.unselectTool = function () {
+        updatePixels();
+        //make the direction buttons hidden once the 
+        //tool has been unselected
+        for (let i = 0; i < this.elements.length; i++) {
+            this.elements[i].style.visibility = "hidden";
+        }
+    };
+}
