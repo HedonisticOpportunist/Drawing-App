@@ -3,7 +3,7 @@ FREE HAND TOOL FUNCTION
 */
 
 function FreeHandTool() {
-    this.icon = "assets/pencil.png";
+    this.icon = "assets/pencil.webp";
     this.name = "Free Hand Tool";
 
     this.previousMouseX = -1;

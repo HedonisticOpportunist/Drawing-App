@@ -3,7 +3,7 @@ GEOMETRIC SHAPES TOOL FUNCTION
 */
 
 function GeometricShapesTool() {
-    this.icon = "assets/shapes.png";
+    this.icon = "assets/shapes.webp";
     this.name = "Draw Shapes Tool";
 
     this.elements = document.getElementsByClassName("shape");

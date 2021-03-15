@@ -3,7 +3,7 @@ ANIMATION TOOL FUNCTION
 */
 
 function AnimationTool() {
-    this.icon = "assets/anime.png";
+    this.icon = "assets/anime.webp";
     this.name = "Animation Tool";
     this.elements = document.getElementsByClassName("animation");
 

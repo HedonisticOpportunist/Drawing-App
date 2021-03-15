@@ -22,12 +22,12 @@ function StartHelpers() {
     this.preloadImages = function () {
         //preload the sleeping kitten animation
         imageProperties.sequenceAnimation = loadAnimation(
-            "animations/kitten3.png",
-            "animations/kitten4.png",
-            "animations/kitten5.png",
-            "animations/kitten6.png",
-            "animations/kitten7.png",
-            "animations/kitten8.png"
+            "animations/kitten3.webp",
+            "animations/kitten4.webp",
+            "animations/kitten5.webp",
+            "animations/kitten6.webp",
+            "animations/kitten7.webp",
+            "animations/kitten8.webp"
         );
 
         /* nested for loop that loads both the cat images 
@@ -94,7 +94,7 @@ function StartHelpers() {
       new AddTransparentLayer(),
       new CroppingTool(),
       new EraserTool(),
-      new MirrorDrawTool(),
+      //new MirrorDrawTool(),
     ];
 
         /* iterate through the elements in the tools array and then add them to  

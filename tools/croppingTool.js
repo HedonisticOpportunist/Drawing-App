@@ -3,7 +3,7 @@ CROPPING TOOL CLASS
 */
 
 function CroppingTool() {
-    this.icon = "assets/scissors.png";
+    this.icon = "assets/scissors.webp";
     this.name = "Cropping Tool";
     this.button = document.getElementById("cut_btn");
 

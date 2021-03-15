@@ -3,7 +3,7 @@ IMAGE TOOL FUNCTION
 */
 
 function ImageTool() {
-    this.icon = "assets/cat_image.png";
+    this.icon = "assets/cat_image.webp";
     this.name = "Image Tool";
     this.elements = document.querySelectorAll("[class = 'cat']");
 

@@ -3,7 +3,7 @@ ERASER TOOL FUNCTION
 */
 
 function EraserTool() {
-    this.icon = "assets/eraser.png";
+    this.icon = "assets/eraser.webp";
     this.name = "Eraser Tool";
 
     this.startMouseX = -1;

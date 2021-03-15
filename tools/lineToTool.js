@@ -3,7 +3,7 @@ LINE TO TOOL FUNCTION
 */
 
 function LineToTool() {
-    this.icon = "assets/draw_line.png";
+    this.icon = "assets/draw_line.webp";
     this.name = "Draw Line Tool";
 
     this.startMouseX = -1;

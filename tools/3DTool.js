@@ -3,7 +3,7 @@
 */
 
 function ThreeDimensionalTool() {
-    this.icon = "assets/3d.png";
+    this.icon = "assets/3d.webp";
     this.name = "3D Tool";
 
     this.elements = document.getElementsByClassName("threedim");

@@ -18,20 +18,20 @@ VARIABLES
 
 let imageProperties = {
     cat_images: [
-    "assets/cat_image.png",
-    "assets/unicorn_cat.png",
-    "assets/blue_cat.png",
-    "assets/kitty.png",
-    "assets/black-cat.png",
-    "assets/pawprints.png",
-    "assets/paw.png",
-    "assets/brown_paw.png",
+    "assets/cat_image.webp",
+    "assets/unicorn_cat.webp",
+    "assets/blue_cat.webp",
+    "assets/kitty.webp",
+    "assets/black-cat.webp",
+    "assets/pawprints.webp",
+    "assets/paw.webp",
+    "assets/brown_paw.webp",
   ],
 
     non_sequence_animations: [
-    "animations/run.png",
-    "animations/ghost.png",
-    "animations/cat.png",
+    "animations/run.webp",
+    "animations/ghost.webp",
+    "animations/cat.webp",
   ],
 
     sequenceAnimation: null

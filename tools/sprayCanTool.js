@@ -3,7 +3,7 @@ SPRAY CAN TOOL FUNCTION
 */
 
 function SprayCanTool() {
-    this.icon = "assets/spray_can.png";
+    this.icon = "assets/spray_can.webp";
     this.name = "Spray Can Tool";
 
     this.points = drawingProperties.sliderValue;

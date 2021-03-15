@@ -3,7 +3,7 @@ TRANSPARENT LAYER TOOL FUNCTION
 */
 
 function AddTransparentLayer() {
-    this.icon = "assets/change_background.png";
+    this.icon = "assets/change_background.webp";
     this.name = "Add Transparent Layer Tool";
 
     /*

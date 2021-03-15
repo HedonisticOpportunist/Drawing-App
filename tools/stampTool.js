@@ -3,7 +3,7 @@ STAMP TOOL FUNCTION
 */
 
 function StampTool() {
-    this.icon = "assets/stamp.png";
+    this.icon = "assets/stamp.webp";
     this.name = "Stamp Tool";
     this.size = null;
     this.elements = document.querySelectorAll("[class = 'stamp']");

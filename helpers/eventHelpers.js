@@ -27,6 +27,8 @@ let eventConditions = {
     clickedImage: null,
     imgClicked: null,
     cutBtnSelected: null,
+    verticalSelected: null,
+    horizontalSelected: null
 };
 
 function EventHelpers() {

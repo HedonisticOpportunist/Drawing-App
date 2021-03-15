@@ -3,13 +3,14 @@ MIRROR DRAW TOOL FUNCTION
 */
 
 function MirrorDrawTool() {
-    this.icon = "assets/mirrorDraw.jpg";
+    this.icon = "assets/mirrorDraw.webp";
     this.name = "Mirror Draw Tool";
 
     this.axis = "x";
     this.lineOfSymmetry = width / 2;
     let self = this;
 
+    this.elements = document.querySelectorAll("[class = 'btn direction']");
     this.previousMouseX = -1;
     this.previousMouseY = -1;
 
@@ -27,6 +28,11 @@ function MirrorDrawTool() {
         updatePixels();
 
         if (mouseIsPressed) {
+            //make the direction buttons visible
+            for (let i = 0; i < this.elements.length; i++) {
+                this.elements[i].style.visibility = "visible";
+            }
+
             if (this.previousMouseX == -1) {
                 this.previousMouseX = mouseX;
                 this.previousMouseY = mouseY;
@@ -53,51 +59,46 @@ function MirrorDrawTool() {
             this.previousOppositeMouseY = -1;
         }
 
-        loadPixels();
-        push();
-        strokeWeight(3);
-        stroke("#383e56");
+//        if (self.axis == "x") {
+    //            self.axis = "y";
+    //            self.lineOfSymmetry = height / 2;
+    //            button.html("Make Vertical");
+    //
+    //            self.axis = "x";
+    //            self.lineOfSymmetry = width / 2;
+    //            button.html("Make Horizontal");
 
-        if (this.axis == "x") {
-            line(width / 2, 0, width / 2, height);
-        } else {
-            line(0, height / 2, width, height / 2);
-        }
-        pop();
-    };
+            loadPixels();
+            push();
+            strokeWeight(3);
+            stroke("#383e56");
 
-    this.calculateOpposite = function (n, a) {
-        if (a != this.axis) {
-            return n;
-        }
-
-        if (n < this.lineOfSymmetry) {
-            return this.lineOfSymmetry + (this.lineOfSymmetry - n);
-        } else {
-            return this.lineOfSymmetry - (n - this.lineOfSymmetry);
-        }
-    };
-
-    this.unselectTool = function () {
-        updatePixels();
-        select(".options").html("");
-    };
-
-    this.populateOptions = function () {
-        select(".options").html(
-            "<button id='directionButton'>Make Horizontal</button>"
-        );
-        select("#directionButton").mouseClicked(function () {
-            let button = select("#" + this.elt.id);
-            if (self.axis == "x") {
-                self.axis = "y";
-                self.lineOfSymmetry = height / 2;
-                button.html("Make Vertical");
+            if (this.axis == "x") {
+                line(width / 2, 0, width / 2, height);
             } else {
-                self.axis = "x";
-                self.lineOfSymmetry = width / 2;
-                button.html("Make Horizontal");
+                line(0, height / 2, width, height / 2);
             }
-        });
-    };
-}
+            pop();
+        };
+
+        this.calculateOpposite = function (n, a) {
+            if (a != this.axis) {
+                return n;
+            }
+
+            if (n < this.lineOfSymmetry) {
+                return this.lineOfSymmetry + (this.lineOfSymmetry - n);
+            } else {
+                return this.lineOfSymmetry - (n - this.lineOfSymmetry);
+            }
+        };
+
+        this.unselectTool = function () {
+            updatePixels();
+            //make the direction buttons hidden once the 
+            //tool has been unselected
+            for (let i = 0; i < this.elements.length; i++) {
+                this.elements[i].style.visibility = "hidden";
+            }
+        };
+    }

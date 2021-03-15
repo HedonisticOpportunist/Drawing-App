@@ -3,7 +3,7 @@ RANDOM STRING TOOL FUNCTION
 */
 
 function RandomStringTool() {
-    this.icon = "assets/text.png";
+    this.icon = "assets/text.webp";
     this.name = "Random Cat Emoji String Tool";
 
     //https://cutekaomoji.com/animals/cats/
