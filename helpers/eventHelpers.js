@@ -167,7 +167,7 @@ function EventHelpers() {
 
     /* button selector array
      */
-    buttonsSelectorArray: ["#cut_btn", "#horizontal_btn", "#vertical_btn"],
+    buttonsSelectorArray: ["#crop_btn", "#horizontal_btn", "#vertical_btn"],
   };
 
   /*

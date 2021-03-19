@@ -6,6 +6,7 @@ body {
   font-family: "Space Grotesk", sans-serif;
   font-size: 12px;
 }
+a {text-decoration: none;}
 ul,
 li {
   list-style-type: none;
@@ -131,7 +132,7 @@ Slider
   -webkit-appearance: none;
   appearance: none;
   width: 20%;
-  height: 15px;
+  height: 12px;
   background: #aee6e6;
   outline: none;
   opacity: 0.7;
@@ -144,14 +145,14 @@ Slider
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   background: #93abd3;
   cursor: pointer;
 }
 .slider::-moz-range-thumb {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   background: #93abd3;
   cursor: pointer;
 }
@@ -237,7 +238,7 @@ Shapes Button
 }
 
 /*
-Cut Button
+Crop Button
 */
 
 #crop_btn {
