@@ -15,8 +15,8 @@ li {
   font-style: italic;
 }
 
-/* 
-Component styling 
+/*
+Component styling
 */
 
 #sidebar {
@@ -74,8 +74,8 @@ Component styling
   font-size: 150%;
 }
 
-/* 
-Gradient button styling 
+/*
+Gradient button styling
 */
 
 .btn {
@@ -229,7 +229,7 @@ Assorted icon styling
 }
 
 /*
-Shapes Button 
+Shapes Button
 */
 
 #shapes_btn {
@@ -240,11 +240,11 @@ Shapes Button
 Cut Button
 */
 
-#cut_btn {
+#crop_btn {
   visibility: hidden;
 }
 
-/* 
+/*
 Veritcal and Horizontal  Buttons
 */
 
@@ -255,8 +255,8 @@ Veritcal and Horizontal  Buttons
   visibility: hidden;
 }
 
-/* 
-Mini tool display 
+/*
+Mini tool display
 */
 
 .mini {
@@ -287,8 +287,8 @@ hr.style-seven:before {
   border-radius: 20px;
 }
 
-/* 
-Media query to deal with small screens 
+/*
+Media query to deal with small screens
 */
 
 @media only screen and (max-width: 600px) {

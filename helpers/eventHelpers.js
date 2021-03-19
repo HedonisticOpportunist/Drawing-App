@@ -5,7 +5,7 @@ Implements the event methods used throughout the drawing app.
 */
 
 /*
-VARIABLES 
+VARIABLES
 */
 
 //boolean compound conditons
@@ -104,7 +104,7 @@ function EventHelpers() {
   eventConditions.drawKittensCondition =
     !this.runningCat && this.sleepingCat && !this.ghost && !this.rubik;
 
-  /* singleton array containing 
+  /* singleton array containing
     all the related arrays */
   let selectorArrays = {
     /* cat object array containing references
@@ -172,10 +172,10 @@ function EventHelpers() {
 
   /*
   ************************************
-        
+
         METHODS
-    
-  ************************************  
+
+  ************************************
   */
 
   /* Delegating all the mouse click related events
@@ -409,7 +409,7 @@ function EventHelpers() {
 
       if (key == "buttonsSelectorArray") {
         for (let n = 0; n < selectorArrays.buttonsSelectorArray.length; n++) {
-          /* the following JQuery deals with the cut button 
+          /* the following JQuery deals with the cut button
                     and setting when to draw it on the canvas */
           select(selectorArrays.buttonsSelectorArray[n]).mouseClicked(
             function () {

@@ -5,7 +5,7 @@ CROPPING TOOL CLASS
 function CroppingTool() {
   this.icon = "assets/scissors.webp";
   this.name = "Cropping Tool";
-  this.button = document.getElementById("cut_btn");
+  this.button = document.getElementById("crop_btn");
 
   this.startMouseX = -1;
   this.startMouseY = -1;
@@ -13,9 +13,9 @@ function CroppingTool() {
 
   /*
   ************************************
-        
+
             METHODS
-        
+
   ************************************
   */
   this.draw = function () {
@@ -29,7 +29,7 @@ function CroppingTool() {
         this.drawing = true;
         loadPixels();
       } else {
-        if (eventConditions.cutBtnSelected) {
+        if (eventConditions.cropBtnSelected) {
           updatePixels();
 
           /* setting the cropping tool 'erased area'
