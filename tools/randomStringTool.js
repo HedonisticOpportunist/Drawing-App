@@ -3,11 +3,11 @@ RANDOM STRING TOOL FUNCTION
 */
 
 function RandomStringTool() {
-    this.icon = "assets/text.webp";
-    this.name = "Random Cat Emoji String Tool";
+  this.icon = "assets/text.webp";
+  this.name = "Random Cat Emoji String Tool";
 
-    //https://cutekaomoji.com/animals/cats/
-    this.catEmojis = [
+  //https://cutekaomoji.com/animals/cats/
+  this.catEmojis = [
     "^._.^= ∫",
     "ฅ(＾・ω・＾ฅ)",
     "(＾・ω・＾✿",
@@ -26,30 +26,30 @@ function RandomStringTool() {
     "(＾º◡º＾❁)",
   ];
 
-    /*
+  /*
     ************************************
             
               METHODS
             
     ************************************ 
-    */
-    this.draw = function () {
-        loadPixels();
+  */
+  this.draw = function () {
+    loadPixels();
 
-        if (mouseIsPressed && drawingProperties.sliderValue != null) {
-            this.pickString();
-        }
+    if (mouseIsPressed && drawingProperties.sliderValue != null) {
+      this.pickString();
+    }
 
-        loadPixels();
-        push();
-        pop();
-    };
+    loadPixels();
+    push();
+    pop();
+  };
 
-    this.pickString = function (result) {
-        textSize(drawingProperties.sliderValue);
-        fill("#48426d");
-        //get a random index from the cat emoji array
-        let randomValue = Math.floor(Math.random() * this.catEmojis.length);
-        text(this.catEmojis[randomValue], mouseX, mouseY);
-    };
+  this.pickString = function (result) {
+    textSize(drawingProperties.sliderValue);
+    fill("#48426d");
+    //get a random index from the cat emoji array
+    let randomValue = Math.floor(Math.random() * this.catEmojis.length);
+    text(this.catEmojis[randomValue], mouseX, mouseY);
+  };
 }
