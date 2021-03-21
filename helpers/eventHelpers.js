@@ -26,7 +26,7 @@ let eventConditions = {
 
   clickedImage: null,
   imgClicked: null,
-  cutBtnSelected: null,
+  cropBtnSelected: null,
   verticalSelected: null,
   horizontalSelected: null,
 };
@@ -54,7 +54,7 @@ function EventHelpers() {
   eventConditions.imgClicked = false;
 
   // button conditons
-  eventConditions.cutBtnSelected = false;
+  eventConditions.cropBtnSelected = false;
   eventConditions.verticalSelected = false;
   eventConditions.horizontalSelected = false;
 
@@ -413,8 +413,8 @@ function EventHelpers() {
                     and setting when to draw it on the canvas */
           select(selectorArrays.buttonsSelectorArray[n]).mouseClicked(
             function () {
-              if (selectorArrays.buttonsSelectorArray[n] == "#cut_btn") {
-                eventConditions.cutBtnSelected = true;
+              if (selectorArrays.buttonsSelectorArray[n] == "#crop_btn") {
+                eventConditions.cropBtnSelected = true;
               }
 
               if (selectorArrays.buttonsSelectorArray[n] == "#horizontal_btn") {
