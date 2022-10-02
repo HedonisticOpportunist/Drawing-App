@@ -1,5 +1,6 @@
-# drawing_app_minfied
-The drawing app minified for submission. 
+# drawing_app
+
+This was written for the university module: Introduction to Programming II / CM1010 (University of London). 
 
 URL: https://hedonisticopportunist.github.io/drawing_app/
 
