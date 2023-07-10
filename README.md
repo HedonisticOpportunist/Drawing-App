@@ -2,6 +2,6 @@
 
 This was written for the university module: Introduction to Programming II / CM1010 (University of London). 
 
-URL: https://hedonisticopportunist.github.io/drawing_app/
+URL: https://hedonisticopportunist.github.io/Drawing-App/
 
-Report: https://hedonisticopportunist.github.io/drawing_app/final_report.html
+Report: https://hedonisticopportunist.github.io/Drawing-App/final_report.html
